@@ -5,86 +5,109 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sarthak Shelar | Portfolio</title>
+<meta name="description" content="Portfolio of Sarthak Shelar - Computer Science graduate, aspiring Cloud Engineer and Web Developer.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --bg:#080d18;
-  --card:#111c2e;
+  --surface:#101a2b;
+  --card:#111d30;
   --text:#f5f7fb;
   --muted:#aab6c8;
   --accent:#38bdf8;
   --border:#26354a;
-  --nav:rgba(8,13,24,.96);
+  --nav:rgba(8,13,24,.94);
 }
 body.light {
-  --bg:#f3f6fb;
+  --bg:#f4f7fb;
+  --surface:#eaf0f8;
   --card:#ffffff;
   --text:#152238;
   --muted:#526176;
   --accent:#087eb5;
   --border:#d8e1ec;
-  --nav:rgba(255,255,255,.96);
+  --nav:rgba(255,255,255,.94);
 }
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);transition:.3s;line-height:1.7}
+body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
 a{text-decoration:none;color:inherit}
-.container{width:90%;max-width:1100px;margin:auto}
-header{position:sticky;top:0;background:var(--nav);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:10}
-.navbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:10px 0}
-.logo{font-size:23px;font-weight:800;color:var(--accent);white-space:nowrap}
-.links{display:flex;gap:17px;flex-wrap:wrap;justify-content:center}
-.links a{font-size:12px;color:var(--muted)}
+.container{width:90%;max-width:1150px;margin:auto}
+
+header{position:sticky;top:0;z-index:100;background:var(--nav);backdrop-filter:blur(15px);border-bottom:1px solid var(--border)}
+.navbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:800;color:var(--accent);white-space:nowrap}
+.links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.links a{font-size:12px;color:var(--muted);transition:.3s}
 .links a:hover{color:var(--accent)}
-.theme-btn{background:var(--card);color:var(--text);border:1px solid var(--border);padding:9px 13px;border-radius:25px;cursor:pointer;font-family:inherit;font-size:12px}
+.theme-btn{background:var(--card);color:var(--text);border:1px solid var(--border);padding:9px 13px;border-radius:25px;cursor:pointer;font-family:inherit;font-size:12px;white-space:nowrap}
+
 section{padding:85px 0;scroll-margin-top:75px}
-.hero{min-height:85vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 30%,rgba(56,189,248,.13),transparent 35%)}
+.hero{min-height:87vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 35%,rgba(56,189,248,.13),transparent 35%)}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:55px}
 .eyebrow{color:var(--accent);letter-spacing:3px;font-size:12px;font-weight:700;margin-bottom:15px}
-h1{font-size:clamp(38px,7vw,65px);line-height:1.2;margin-bottom:15px}
-.highlight,.section-title span{color:var(--accent)}
-.hero h3{font-size:19px;margin-bottom:12px}
-.hero p,.description{color:var(--muted);font-size:14px;max-width:700px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-block;background:var(--accent);color:#071321;padding:11px 20px;border-radius:7px;font-size:13px;font-weight:700;border:1px solid var(--accent)}
-.btn.outline{background:transparent;color:var(--accent)}
-.section-title{font-size:32px;margin-bottom:12px}
-.description{margin-bottom:30px}
-.box,.card,.contact-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:24px}
+h1{font-size:clamp(38px,5vw,62px);line-height:1.2;margin-bottom:17px;font-weight:800}
+.highlight{color:var(--accent)}
+.hero h3{font-size:19px;margin-bottom:13px}
+.hero p,.description{color:var(--muted);font-size:14px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;background:var(--accent);color:#071321;padding:11px 19px;border-radius:7px;font-size:13px;font-weight:700;border:1px solid var(--accent);transition:.3s}
+.btn:hover{transform:translateY(-3px);opacity:.9}
+.btn-outline{background:transparent;color:var(--accent)}
+.profile-wrap{display:flex;justify-content:center;align-items:center}
+.profile-ring{width:min(320px,75vw);aspect-ratio:1;border-radius:50%;padding:8px;background:linear-gradient(135deg,var(--accent),#6756e8);box-shadow:0 0 45px rgba(56,189,248,.22)}
+.profile-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 25%;border:5px solid var(--bg);display:block}
+
+.section-title{font-size:32px;font-weight:800;margin-bottom:12px}
+.section-title span{color:var(--accent)}
+.description{margin-bottom:32px;max-width:700px}
+.box,.card,.contact-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
 .box p,.card p,.card li,.contact-card p,.contact-card a{color:var(--muted);font-size:13px}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:15px}
-.skill{background:var(--card);border:1px solid var(--border);padding:17px;border-radius:10px;font-size:14px;font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:15px}
+.skill{background:var(--card);border:1px solid var(--border);padding:17px;border-radius:11px;font-size:14px;font-weight:600;transition:.3s}
+.skill:hover,.card:hover{border-color:var(--accent);transform:translateY(-4px)}
 .skill span{display:block;font-size:11px;color:var(--muted);font-weight:400}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .card{transition:.3s}
-.card:hover,.skill:hover{border-color:var(--accent);transform:translateY(-4px)}
 .card h3{font-size:18px;margin-bottom:10px}
 .card ul{padding-left:20px;margin-top:12px}
 .tag{display:inline-block;background:rgba(56,189,248,.12);color:var(--accent);padding:4px 9px;border-radius:20px;font-size:11px;margin:5px 3px 0 0}
-.timeline{border-left:2px solid var(--accent);padding-left:24px;margin-left:8px}
-.item{position:relative;margin-bottom:28px}
-.item:before{content:"";position:absolute;left:-32px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--accent)}
-.item h3{font-size:17px}
+.timeline{border-left:2px solid var(--accent);padding-left:25px;margin-left:8px}
+.item{position:relative;margin-bottom:30px}
+.item:before{content:"";position:absolute;left:-33px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+.item h3{font-size:18px}
 .date{font-size:12px;color:var(--accent);font-weight:600}
-.item p{font-size:13px;color:var(--muted);margin-top:6px}
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
-.contact-card h3{font-size:14px;color:var(--accent);margin-bottom:5px}
-footer{text-align:center;border-top:1px solid var(--border);padding:25px;color:var(--muted);font-size:12px}
+.item p{color:var(--muted);font-size:13px;margin-top:7px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.contact-card h3{font-size:14px;color:var(--accent);margin-bottom:6px}
+.contact-card a{overflow-wrap:anywhere}
+.contact-card a:hover{color:var(--accent)}
+footer{text-align:center;padding:25px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+
 @media(max-width:850px){
-.navbar{justify-content:space-between}
-.links{order:3;width:100%;gap:13px}
-.links a{font-size:11px}
-.theme-btn{margin-left:auto}
+ .hero-grid{grid-template-columns:1fr;gap:35px;text-align:center}
+ .profile-wrap{grid-row:1}
+ .hero-buttons{justify-content:center}
+ .hero p{margin:auto}
+ .navbar{padding:12px 0}
+ .links{order:3;width:100%;justify-content:center;gap:13px}
+ .links a{font-size:11px}
+ .theme-btn{margin-left:auto}
 }
 @media(max-width:500px){
-section{padding:60px 0}
-.hero{min-height:80vh}
-.section-title{font-size:27px}
-.logo{font-size:19px}
+ section{padding:60px 0}
+ .hero{min-height:auto;padding:65px 0}
+ .profile-ring{width:220px}
+ .section-title{font-size:27px}
+ .logo{font-size:19px}
+ .hero h3{font-size:16px}
 }
 </style>
 </head>
 
 <body>
+
 <header>
 <div class="container navbar">
 <a href="#home" class="logo">Sarthak Shelar</a>
@@ -104,26 +127,52 @@ section{padding:60px 0}
 </header>
 
 <section class="hero" id="home">
-<div class="container">
+<div class="container hero-grid">
+
+<div>
 <div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
 <h1>Hi, I'm <span class="highlight">Sarthak Shelar</span></h1>
 <h3>Aspiring Cloud Engineer & Web Developer</h3>
-<p>Computer Science graduate passionate about web development, AWS cloud computing and building practical digital solutions.</p>
-<div class="buttons">
+<p>
+Computer Science graduate passionate about web development,
+AWS cloud computing and building practical digital solutions.
+I enjoy exploring new technologies and creating useful applications.
+</p>
+
+<div class="hero-buttons">
 <a href="#projects" class="btn">Explore My Work</a>
-<a href="#contact" class="btn outline">Contact Me</a>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
+<a href="Sarthak%20Shelar%20Resume.pdf" class="btn" download>⬇ Download Resume</a>
 </div>
+</div>
+
+<div class="profile-wrap">
+<div class="profile-ring">
+<img src="Profile%20photo.jpg" alt="Sarthak Shelar profile photo">
+</div>
+</div>
+
 </div>
 </section>
 
 <section id="about">
 <div class="container">
 <h2 class="section-title">About <span>Me</span></h2>
-<p class="description">Get to know me.</p>
+<p class="description">A little introduction about myself.</p>
 <div class="box">
-<p>I am a Computer Science graduate from Karmaveer Bhaurao Patil College, Vashi. I am interested in web development, cloud computing and modern technologies.<br><br>
-I have practical experience developing web applications and knowledge of AWS cloud services, databases and programming concepts. I enjoy learning new technologies and applying my knowledge to real-world projects.<br><br>
-My goal is to grow as a technology professional and contribute to meaningful software and cloud solutions.</p>
+<p>
+I am a Computer Science graduate from Karmaveer Bhaurao Patil
+College, Vashi. I am interested in web development, cloud computing
+and modern technologies.
+<br><br>
+I have practical experience developing web applications and
+knowledge of AWS cloud services, databases and programming concepts.
+I enjoy learning new technologies and applying my knowledge to
+real-world projects.
+<br><br>
+My goal is to grow as a technology professional and contribute
+to meaningful software and cloud solutions.
+</p>
 </div>
 </div>
 </section>
@@ -139,8 +188,8 @@ My goal is to grow as a technology professional and contribute to meaningful sof
 <div class="skill">Python<span>Programming fundamentals</span></div>
 <div class="skill">SQL & MySQL<span>Database management</span></div>
 <div class="skill">AWS Cloud<span>EC2, S3, VPC and IAM basics</span></div>
-<div class="skill">Cloud Computing<span>Storage, CDN and serverless</span></div>
-<div class="skill">Git & GitHub<span>Version control</span></div>
+<div class="skill">Cloud Computing<span>Storage, CDN and serverless concepts</span></div>
+<div class="skill">Git & GitHub<span>Version control fundamentals</span></div>
 <div class="skill">Software Testing<span>Testing and debugging basics</span></div>
 <div class="skill">Data Structures<span>DSA fundamentals</span></div>
 <div class="skill">Computer Networks<span>Networking fundamentals</span></div>
@@ -178,7 +227,7 @@ My goal is to grow as a technology professional and contribute to meaningful sof
 <section id="experience">
 <div class="container">
 <h2 class="section-title">My <span>Experience</span></h2>
-<p class="description">Professional experience.</p>
+<p class="description">Professional experience and learning.</p>
 <div class="timeline">
 <div class="item">
 <h3>Web Developer Intern</h3>
@@ -192,7 +241,7 @@ My goal is to grow as a technology professional and contribute to meaningful sof
 <section id="education">
 <div class="container">
 <h2 class="section-title">My <span>Education</span></h2>
-<p class="description">Academic background.</p>
+<p class="description">My academic background.</p>
 <div class="timeline">
 <div class="item">
 <h3>Bachelor of Science in Computer Science</h3>
@@ -246,5 +295,6 @@ setTheme(nextTheme);
 });
 })();
 </script>
+
 </body>
 </html>
