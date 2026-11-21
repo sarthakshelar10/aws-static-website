@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sarthak Shelar | Portfolio</title>
 <meta name="description" content="Sarthak Shelar - Aspiring Cloud Engineer and Web Developer">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 :root {
   --bg:#080d18;
@@ -32,7 +29,6 @@ body.light {
 body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:.3s}
 a{text-decoration:none;color:inherit}
 .container{width:90%;max-width:1150px;margin:auto}
-
 header{position:sticky;top:0;z-index:100;background:var(--nav);backdrop-filter:blur(15px);border-bottom:1px solid var(--border)}
 .navbar{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
 .logo{font-size:22px;font-weight:800;color:var(--accent);white-space:nowrap}
@@ -40,7 +36,6 @@ header{position:sticky;top:0;z-index:100;background:var(--nav);backdrop-filter:b
 .links a{font-size:12px;color:var(--muted);transition:.3s}
 .links a:hover{color:var(--accent)}
 .theme-btn{background:var(--card);color:var(--text);border:1px solid var(--border);padding:9px 13px;border-radius:25px;cursor:pointer;font-family:inherit;font-size:12px;white-space:nowrap}
-
 section{padding:85px 0;scroll-margin-top:75px}
 .hero{min-height:87vh;display:flex;align-items:center;background:radial-gradient(circle at 80% 35%,rgba(56,189,248,.13),transparent 35%)}
 .hero-grid{display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:55px}
@@ -56,7 +51,6 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.2;margin-bottom:17px;font-weight
 .profile-wrap{display:flex;justify-content:center;align-items:center}
 .profile-ring{width:min(320px,75vw);aspect-ratio:1;border-radius:50%;padding:8px;background:linear-gradient(135deg,var(--accent),#6756e8);box-shadow:0 0 45px rgba(56,189,248,.22)}
 .profile-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 25%;border:5px solid var(--bg);display:block}
-
 .section-title{font-size:32px;font-weight:800;margin-bottom:12px}
 .section-title span{color:var(--accent)}
 .description{margin-bottom:32px;max-width:700px}
@@ -71,6 +65,8 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.2;margin-bottom:17px;font-weight
 .card h3{font-size:18px;margin-bottom:10px}
 .card ul{padding-left:20px;margin-top:12px}
 .tag{display:inline-block;background:rgba(56,189,248,.12);color:var(--accent);padding:4px 9px;border-radius:20px;font-size:11px;margin:5px 3px 0 0}
+.project-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.project-actions .btn{font-size:12px;padding:9px 14px}
 .timeline{border-left:2px solid var(--accent);padding-left:25px;margin-left:8px}
 .item{position:relative;margin-bottom:30px}
 .item:before{content:"";position:absolute;left:-33px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
@@ -84,7 +80,6 @@ h1{font-size:clamp(38px,5vw,62px);line-height:1.2;margin-bottom:17px;font-weight
 .linkedin-link{display:inline-flex;align-items:center;gap:8px;color:#0a66c2!important;font-weight:700}
 .linkedin-icon{background:#0a66c2;color:white;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;border-radius:4px;font-weight:800;font-size:14px}
 footer{text-align:center;padding:25px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
-
 @media(max-width:850px){
  .hero-grid{grid-template-columns:1fr;gap:35px;text-align:center}
  .profile-wrap{grid-row:1}
@@ -105,13 +100,10 @@ footer{text-align:center;padding:25px;border-top:1px solid var(--border);color:v
 }
 </style>
 </head>
-
 <body>
-
 <header>
 <div class="container navbar">
 <a href="#home" class="logo">Sarthak Shelar</a>
-
 <nav class="links">
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -121,37 +113,28 @@ footer{text-align:center;padding:25px;border-top:1px solid var(--border);color:v
 <a href="#education">Education</a>
 <a href="#contact">Contact</a>
 </nav>
-
 <button class="theme-btn" id="themeToggle">☀️ Light Mode</button>
 </div>
 </header>
 
 <section class="hero" id="home">
 <div class="container hero-grid">
-
 <div>
 <div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
 <h1>Hi, I'm <span class="highlight">Sarthak Shelar</span></h1>
 <h3>Aspiring Cloud Engineer & Web Developer</h3>
-<p>
-Computer Science graduate passionate about web development,
-AWS cloud computing and building practical digital solutions.
-I enjoy exploring new technologies and creating useful applications.
-</p>
-
+<p>Computer Science graduate passionate about web development, AWS cloud computing and building practical digital solutions. I enjoy exploring new technologies and creating useful applications.</p>
 <div class="hero-buttons">
 <a href="#projects" class="btn">Explore My Work</a>
 <a href="#contact" class="btn btn-outline">Contact Me</a>
 <a href="Sarthak%20Shelar%20Resume.pdf" class="btn" download>⬇ Download Resume</a>
 </div>
 </div>
-
 <div class="profile-wrap">
 <div class="profile-ring">
 <img src="Profile%20photo.jpg" alt="Sarthak Shelar profile photo">
 </div>
 </div>
-
 </div>
 </section>
 
@@ -161,17 +144,11 @@ I enjoy exploring new technologies and creating useful applications.
 <p class="description">A little introduction about myself.</p>
 <div class="box">
 <p>
-I am a Computer Science graduate from Karmaveer Bhaurao Patil
-College, Vashi. I am interested in web development, cloud computing
-and modern technologies.
+I am a Computer Science graduate from Karmaveer Bhaurao Patil College, Vashi. I am interested in web development, cloud computing and modern technologies.
 <br><br>
-I have practical experience developing web applications and
-knowledge of AWS cloud services, databases and programming concepts.
-I enjoy learning new technologies and applying my knowledge to
-real-world projects.
+I have practical experience developing web applications and knowledge of AWS cloud services, databases and programming concepts. I enjoy learning new technologies and applying my knowledge to real-world projects.
 <br><br>
-My goal is to grow as a technology professional and contribute
-to meaningful software and cloud solutions.
+My goal is to grow as a technology professional and contribute to meaningful software and cloud solutions.
 </p>
 </div>
 </div>
@@ -204,20 +181,25 @@ to meaningful software and cloud solutions.
 <p class="description">Projects I have worked on.</p>
 <div class="cards">
 <div class="card">
-<h3>Travel Diary Web Application</h3>
-<p>A web application that allows users to record and manage their travel experiences in one place.</p>
+<h3>✈️ Travel Diary Web Application</h3>
+<p>A responsive web application to create, organize and explore personal travel memories with photos and trip details.</p>
 <ul>
-<li>Add and manage trip details</li>
-<li>Upload travel images</li>
-<li>Display travel entries dynamically</li>
-<li>Export travel information to Word documents</li>
-<li>Responsive user interface</li>
+<li>Add, edit and delete travel memories</li>
+<li>Upload travel photos (up to 2 MB each)</li>
+<li>Search memories and filter by category</li>
+<li>Switch between dark and light themes</li>
+<li>Export saved memories as JSON</li>
+<li>Save entries in browser local storage</li>
 </ul>
 <div style="margin-top:15px">
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
 <span class="tag">JavaScript</span>
 <span class="tag">AngularJS</span>
+</div>
+<div class="project-actions">
+<a class="btn" href="https://sarthakshelar10.github.io/travel-diary/" target="_blank" rel="noopener noreferrer">🌐 Live Demo</a>
+<a class="btn btn-outline" href="https://github.com/sarthakshelar10/travel-diary" target="_blank" rel="noopener noreferrer">⌘ Source Code</a>
 </div>
 </div>
 </div>
@@ -256,23 +238,19 @@ to meaningful software and cloud solutions.
 <div class="container">
 <h2 class="section-title">Contact <span>Me</span></h2>
 <p class="description">Feel free to contact me for opportunities and collaboration.</p>
-
 <div class="contact">
 <div class="contact-card">
 <h3>Email</h3>
 <a href="mailto:shelarsarthak10@gmail.com">shelarsarthak10@gmail.com</a>
 </div>
-
 <div class="contact-card">
 <h3>Phone</h3>
 <a href="tel:+919152396069">+91 9152396069</a>
 </div>
-
 <div class="contact-card">
 <h3>GitHub</h3>
 <a href="https://github.com/sarthakshelar10" target="_blank" rel="noopener noreferrer">github.com/sarthakshelar10</a>
 </div>
-
 <div class="contact-card">
 <h3>LinkedIn</h3>
 <a class="linkedin-link" href="https://www.linkedin.com/in/sarthak-shelar-97b32026b/" target="_blank" rel="noopener noreferrer">
@@ -280,33 +258,26 @@ to meaningful software and cloud solutions.
 Connect on LinkedIn
 </a>
 </div>
-
 </div>
 </div>
 </section>
-
 <footer>© 2026 Sarthak Shelar. All Rights Reserved.</footer>
-
 <script>
 (function(){
 const button=document.getElementById("themeToggle");
-
 function setTheme(theme){
 document.body.classList.toggle("light",theme==="light");
 button.textContent=theme==="light"?"🌙 Dark Mode":"☀️ Light Mode";
 try{localStorage.setItem("portfolio-theme",theme)}catch(error){}
 }
-
 let savedTheme="dark";
 try{savedTheme=localStorage.getItem("portfolio-theme")||"dark"}catch(error){}
 setTheme(savedTheme);
-
 button.addEventListener("click",function(){
 const nextTheme=document.body.classList.contains("light")?"dark":"light";
 setTheme(nextTheme);
 });
 })();
 </script>
-
 </body>
 </html>
