@@ -2,542 +2,619 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sarthak Shelar  - Computer Science Graduate, Web Developer and Aspiring Cloud Engineer">
-<title>Sarthak Shelar | Developer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>Sarthak Shelar | Portfolio</title>
 
-<style>
-:root {
-  color-scheme: dark;
-  --bg: #080d18;
-  --surface: #0e1728;
-  --card: #121e32;
-  --text: #f8fafc;
-  --muted: #a5b4c8;
-  --blue: #38bdf8;
-  --border: #26364d;
-  --header: rgba(8,13,24,.94);
-  --shadow: rgba(0,0,0,.15);
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-body.light {
-  color-scheme: light;
-  --bg: #f4f7fc;
-  --surface: #eaf0f8;
-  --card: #ffffff;
-  --text: #142033;
-  --muted: #526176;
-  --blue: #087bbd;
-  --border: #d5dfeb;
-  --header: rgba(255,255,255,.95);
-  --shadow: rgba(30,50,80,.08);
-}
+  <style>
+    :root {
+      --bg: #080d18;
+      --bg-secondary: #0d1525;
+      --card: #101b2d;
+      --text: #f5f7fb;
+      --muted: #aab6c8;
+      --accent: #38bdf8;
+      --border: #26354a;
+      --nav: rgba(8, 13, 24, 0.95);
+      --shadow: 0 10px 35px rgba(0,0,0,0.18);
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+    body.light {
+      --bg: #f4f7fb;
+      --bg-secondary: #eaf0f8;
+      --card: #ffffff;
+      --text: #142033;
+      --muted: #526176;
+      --accent: #087eb5;
+      --border: #d8e1ec;
+      --nav: rgba(255,255,255,0.95);
+      --shadow: 0 10px 30px rgba(30,50,80,0.08);
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-  transition: background .25s ease, color .25s ease;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+      line-height: 1.7;
+    }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--header);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 13px 6%;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-}
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
 
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--blue);
-}
+    header {
+      background: var(--nav);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 17px;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
 
-.nav-links a {
-  color: var(--muted);
-  font-size: 13px;
-}
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--accent);
+      white-space: nowrap;
+    }
 
-.nav-links a:hover {
-  color: var(--blue);
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.theme-button {
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  padding: 10px 14px;
-  border-radius: 25px;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  white-space: nowrap;
-}
+    .nav-links a {
+      font-size: 12px;
+      color: var(--muted);
+      transition: 0.3s;
+    }
 
-.theme-button:active {
-  transform: scale(.96);
-}
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
-section {
-  padding: 85px 8%;
-  scroll-margin-top: 80px;
-}
+    .theme-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 25px;
+      padding: 9px 14px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
 
-.hero {
-  min-height: 82vh;
-  display: flex;
-  align-items: center;
-  background: radial-gradient(circle at 85% 30%, rgba(14,116,180,.22), transparent 40%);
-}
+    section {
+      padding: 90px 0;
+      scroll-margin-top: 75px;
+    }
 
-.hero-content {
-  max-width: 760px;
-}
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(14,165,233,0.13), transparent 35%),
+        var(--bg);
+    }
 
-.tag {
-  color: var(--blue);
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
+    .hero-content {
+      max-width: 800px;
+    }
 
-h1 {
-  font-size: clamp(40px, 8vw, 68px);
-  line-height: 1.2;
-  margin: 20px 0;
-}
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
 
-h1 span,
-.section-title span {
-  color: var(--blue);
-}
+    h1 {
+      font-size: clamp(38px, 7vw, 65px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
 
-.hero h2 {
-  font-size: 23px;
-  margin-bottom: 15px;
-}
+    .highlight {
+      color: var(--accent);
+    }
 
-p {
-  color: var(--muted);
-}
+    .hero h3 {
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
 
-.hero p {
-  font-size: 18px;
-  max-width: 650px;
-}
+    .hero p, .section-description {
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 14px;
+    }
 
-.buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 28px;
-}
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
 
-.btn {
-  display: inline-block;
-  padding: 12px 23px;
-  background: var(--blue);
-  color: #07111d;
-  border-radius: 8px;
-  font-weight: bold;
-}
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border-radius: 7px;
+      background: var(--accent);
+      color: #06111e;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--accent);
+      transition: 0.3s;
+    }
 
-.btn.outline {
-  background: transparent;
-  color: var(--blue);
-  border: 1px solid var(--blue);
-}
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+    }
 
-.section-title {
-  text-align: center;
-  font-size: 35px;
-  margin-bottom: 40px;
-}
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+    }
 
-.surface-section {
-  background: var(--surface);
-}
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
 
-.center-content {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-}
+    .section-title span {
+      color: var(--accent);
+    }
 
-.center-content p {
-  font-size: 16px;
-}
+    .section-description {
+      margin-bottom: 35px;
+    }
 
-.skills-grid,
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-}
+    .about-box, .card, .contact-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 24px;
-  border-radius: 13px;
-  box-shadow: 0 5px 20px var(--shadow);
-  transition: transform .25s, border-color .25s;
-}
+    .about-box p {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--blue);
-}
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
 
-.card h3 {
-  color: var(--blue);
-  margin-bottom: 12px;
-}
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-.card p,
-.card li {
-  font-size: 14px;
-}
+    .skill-card:hover, .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
 
-.card ul {
-  padding-left: 19px;
-  color: var(--muted);
-}
+    .skill-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 5px;
+    }
 
-.pill {
-  display: inline-block;
-  padding: 4px 11px;
-  border: 1px solid var(--blue);
-  border-radius: 20px;
-  color: var(--blue);
-  font-size: 12px;
-  margin-bottom: 12px;
-}
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
 
-.contact {
-  text-align: center;
-}
+    .card {
+      transition: 0.3s;
+    }
 
-.contact p {
-  margin: 12px;
-}
+    .card h3 {
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
 
-.contact a:not(.btn) {
-  color: var(--blue);
-}
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid var(--border);
-  font-size: 13px;
-}
+    .card ul {
+      padding-left: 20px;
+      margin-top: 12px;
+    }
 
-footer p {
-  color: var(--muted);
-}
+    .tag {
+      display: inline-block;
+      background: rgba(56,189,248,0.12);
+      color: var(--accent);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      margin: 4px 3px 0 0;
+    }
 
-@media(max-width: 800px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .timeline {
+      border-left: 2px solid var(--accent);
+      padding-left: 25px;
+      margin-left: 8px;
+    }
 
-  .nav-links {
-    gap: 13px;
-  }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
 
-  .nav-links a {
-    font-size: 12px;
-  }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 8px;
+      width: 14px;
+      height: 14px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
 
-  .theme-button {
-    font-size: 13px;
-    margin-top: 5px;
-  }
+    .timeline-item h3 {
+      font-size: 18px;
+    }
 
-  section {
-    padding: 65px 6%;
-  }
+    .timeline-item .date {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+    }
 
-  .hero {
-    min-height: 75vh;
-  }
-}
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 7px;
+    }
 
-@media(prefers-reduced-motion: reduce) {
-  * {
-    scroll-behavior: auto;
-    transition: none !important;
-  }
-}
-</style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .contact-box h3 {
+      font-size: 15px;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+
+    .contact-box p, .contact-box a {
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .navbar {
+        padding: 12px 0;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .theme-btn {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 500px) {
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        min-height: 82vh;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="navbar">
-    <div class="logo">Sarthak.</div>
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">Sarthak Shelar</a>
 
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <button class="theme-button" id="themeToggle" type="button">
-      ☀️ Light Mode
-    </button>
-  </div>
-</header>
-
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="tag">WELCOME TO MY PORTFOLIO</div>
-
-    <h1>Hi, I'm <span>Sarthak Shelar</span></h1>
-
-    <h2>Aspiring Cloud Engineer & Web Developer</h2>
-
-    <p>
-      Computer Science graduate passionate about technology,
-      web development, AWS cloud computing and building
-      practical digital solutions.
-    </p>
-
-    <div class="buttons">
-      <a href="#projects" class="btn">Explore My Work</a>
-      <a href="#contact" class="btn outline">Contact Me</a>
+      <button class="theme-btn" id="themeToggle" type="button">
+        ☀️ Light Mode
+      </button>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="surface-section" id="about">
-  <h2 class="section-title">About <span>Me</span></h2>
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
 
-  <div class="center-content">
-    <p>
-      I am a Bachelor of Science in Computer Science graduate
-      from Karmaveer Bhaurao Patil College, Vashi.
-      I have knowledge of programming, frontend development,
-      databases and cloud computing. I enjoy learning new
-      technologies, solving problems and developing useful
-      applications. I am looking forward to growing my career
-      in software development and cloud technologies.
-    </p>
-  </div>
-</section>
+      <h1>Hi, I'm <span class="highlight">Sarthak Shelar</span></h1>
 
-<section id="skills">
-  <h2 class="section-title">Technical <span>Skills</span></h2>
-
-  <div class="skills-grid">
-
-    <div class="card">
-      <h3>Programming Languages</h3>
-      <p>HTML, CSS, JavaScript, Python, SQL</p>
-    </div>
-
-    <div class="card">
-      <h3>Web Development</h3>
-      <p>AngularJS, Frontend Development, Website Development, Form Handling</p>
-    </div>
-
-    <div class="card">
-      <h3>Cloud Computing</h3>
-      <p>AWS Basics, EC2, S3, VPC, IAM, CDN, Serverless Computing, Virtualization</p>
-    </div>
-
-    <div class="card">
-      <h3>Database</h3>
-      <p>MySQL, Database Design Basics, SQL Queries</p>
-    </div>
-
-    <div class="card">
-      <h3>DevOps & Testing</h3>
-      <p>CI/CD Fundamentals, Deployment Concepts, Software Testing, Debugging</p>
-    </div>
-
-    <div class="card">
-      <h3>Core Computer Science</h3>
-      <p>Data Structures, Algorithms, Operating Systems, Computer Networks</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="surface-section" id="projects">
-  <h2 class="section-title">My <span>Project</span></h2>
-
-  <div class="project-grid">
-
-    <div class="card">
-      <span class="pill">Web Development</span>
-
-      <h3>Travel Diary Web Application</h3>
+      <h3>Aspiring Cloud Engineer & Web Developer</h3>
 
       <p>
-        A web-based platform designed to help users record
-        and manage their travel experiences.
+        Computer Science graduate passionate about technology,
+        web development, AWS cloud computing and building
+        practical digital solutions.
       </p>
 
-      <br>
-
-      <ul>
-        <li>Developed using HTML, CSS, JavaScript and AngularJS.</li>
-        <li>Implemented trip detail forms and image uploads.</li>
-        <li>Created dynamic content display.</li>
-        <li>Enabled conversion of user-entered data into downloadable Word documents.</li>
-        <li>Focused on usability and responsive design.</li>
-      </ul>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">Explore My Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <p class="section-description">A little introduction about myself.</p>
 
-<section id="experience">
-  <h2 class="section-title">Work <span>Experience</span></h2>
+      <div class="about-box">
+        <p>
+          I am a Computer Science graduate from Karmaveer Bhaurao
+          Patil College, Vashi. I am interested in web development,
+          cloud computing and modern technologies.
+          <br><br>
+          I have practical experience in developing web applications
+          and have explored AWS cloud services, databases and
+          programming concepts. I enjoy learning new technologies
+          and applying my knowledge to real-world projects.
+          <br><br>
+          My goal is to grow as a technology professional and
+          contribute to meaningful software and cloud solutions.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <div class="center-content">
-    <div class="card">
-      <span class="pill">2 Months</span>
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <p class="section-description">Technologies and concepts I have learned.</p>
 
-      <h3>Web Developer Intern</h3>
+      <div class="skills-grid">
+        <div class="skill-card">HTML & CSS<span>Web structure and styling</span></div>
+        <div class="skill-card">JavaScript<span>Interactive web development</span></div>
+        <div class="skill-card">AngularJS<span>Frontend development basics</span></div>
+        <div class="skill-card">Python<span>Programming fundamentals</span></div>
+        <div class="skill-card">SQL & MySQL<span>Database management</span></div>
+        <div class="skill-card">AWS Cloud<span>EC2, S3, VPC and IAM basics</span></div>
+        <div class="skill-card">Cloud Computing<span>Storage, CDN and serverless concepts</span></div>
+        <div class="skill-card">Git & GitHub<span>Version control fundamentals</span></div>
+        <div class="skill-card">Software Testing<span>Testing and debugging basics</span></div>
+        <div class="skill-card">Data Structures<span>DSA fundamentals</span></div>
+        <div class="skill-card">Computer Networks<span>Networking fundamentals</span></div>
+        <div class="skill-card">Data Analysis<span>Basic data analysis concepts</span></div>
+      </div>
+    </div>
+  </section>
 
-      <p><strong>PhelixCreatives</strong></p>
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <p class="section-description">Some of the projects I have worked on.</p>
 
-      <p>
-        Completed a two-month internship as a Web Developer,
-        gaining practical exposure to web development
-        and frontend technologies.
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Travel Diary Web Application</h3>
+
+          <p>
+            A web application that allows users to record and
+            manage their travel experiences in one place.
+          </p>
+
+          <ul>
+            <li>Add and manage trip details</li>
+            <li>Upload travel images</li>
+            <li>Display travel entries dynamically</li>
+            <li>Export travel information to Word documents</li>
+            <li>Responsive user interface</li>
+          </ul>
+
+          <div style="margin-top:15px">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">AngularJS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">My <span>Experience</span></h2>
+      <p class="section-description">Professional experience and learning.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Web Developer Intern</h3>
+          <div class="date">PhelixCreatives | 2 Months</div>
+          <p>
+            Completed a two-month internship as a Web Developer,
+            gaining practical exposure to web development and
+            working with web technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">My <span>Education</span></h2>
+      <p class="section-description">My academic background.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <div class="date">2023 – 2026</div>
+          <p>
+            Karmaveer Bhaurao Patil College, Vashi
+            <br>
+            Final result: Passed
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact <span>Me</span></h2>
+      <p class="section-description">
+        Feel free to contact me for opportunities and collaboration.
       </p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Email</h3>
+          <a href="mailto:shelarsarthak10@gmail.com">
+            shelarsarthak10@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-box">
+          <h3>Phone</h3>
+          <a href="tel:+919152396069">+91 9152396069</a>
+        </div>
+
+        <div class="contact-box">
+          <h3>GitHub</h3>
+          <a href="https://github.com/sarthakshelar10" target="_blank" rel="noopener noreferrer">
+            github.com/sarthakshelar10
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="surface-section" id="education">
-  <h2 class="section-title">My <span>Education</span></h2>
+  <footer>
+    © 2026 Sarthak Shelar. All Rights Reserved.
+  </footer>
 
-  <div class="center-content">
-    <div class="card">
-      <h3>Bachelor of Science in Computer Science</h3>
-      <p>Karmaveer Bhaurao Patil College, Vashi</p>
-      <p>2023 – 2026</p>
-      <p>Final Result: Passed</p>
-    </div>
-  </div>
-</section>
+  <script>
+    (function () {
+      const button = document.getElementById("themeToggle");
 
-<section id="contact" class="contact">
-  <h2 class="section-title">Let's <span>Connect</span></h2>
+      function setTheme(theme) {
+        document.body.classList.toggle("light", theme === "light");
 
-  <p>
-    Have an opportunity or want to discuss technology?
-    Feel free to reach out.
-  </p>
+        button.textContent =
+          theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode";
 
-  <p>
-    Email:
-    <a href="mailto:shelarsarthak10@gmail.com">
-      shelarsarthak10@gmail.com
-    </a>
-  </p>
+        try {
+          localStorage.setItem("portfolio-theme", theme);
+        } catch (error) {}
+      }
 
-  <p>
-    Phone:
-    <a href="tel:+919152396069">+91 9152396069</a>
-  </p>
+      let savedTheme = "dark";
 
-  <p>
-    GitHub:
-    <a href="https://github.com/sarthakshelar10"
-       target="_blank" rel="noopener">
-      Visit My GitHub
-    </a>
-  </p>
+      try {
+        savedTheme = localStorage.getItem("portfolio-theme") || "dark";
+      } catch (error) {}
 
-  <div class="buttons" style="justify-content:center">
-    <a class="btn" href="mailto:shelarsarthak10@gmail.com">
-      Send Email
-    </a>
-  </div>
-</section>
+      setTheme(savedTheme);
 
-<footer>
-  <p>© 2026 Sarthak Shelar | All Rights Reserved</p>
-  <p>Designed with passion.</p>
-</footer>
+      button.addEventListener("click", function () {
+        const nextTheme = document.body.classList.contains("light")
+          ? "dark"
+          : "light";
 
-<script>
-(function () {
-  const button = document.getElementById("themeToggle");
-
-  function setTheme(theme) {
-    document.body.classList.toggle("light", theme === "light");
-
-    button.textContent =
-      theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode";
-
-    try {
-      localStorage.setItem("portfolio-theme", theme);
-    } catch (error) {
-      // Theme still works for the current page.
-    }
-  }
-
-  let savedTheme = "dark";
-
-  try {
-    savedTheme = localStorage.getItem("portfolio-theme") || "dark";
-  } catch (error) {}
-
-  setTheme(savedTheme);
-
-  button.addEventListener("click", function () {
-    const nextTheme = document.body.classList.contains("light")
-      ? "dark"
-      : "light";
-
-    setTheme(nextTheme);
-  });
-})();
-</script>
+        setTheme(nextTheme);
+      });
+    })();
+  </script>
 
 </body>
 </html>
